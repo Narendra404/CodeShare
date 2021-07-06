@@ -12,9 +12,30 @@ int main(void)
     printf("Enter the three angles of the triangle :\n");
     scanf("%d %d %d", &a, &b, &c);
 
-    if (((a + b + c) == 180) && (a > 0) && (b > 0) && (c > 0))
+    if ((a + b + c) == 180)
     {
-        printf("The triangle is valid.\n");
+        if (a != 0)
+        {
+            if (b != 0)
+            { 
+                if (c != 0)
+                {
+                    printf("The triangle is valid.\n");
+                }
+                else
+                { 
+                    printf("The triangle is not valid.\n");
+                }
+            }
+            else
+            { 
+                printf("The triangle is not valid.\n");
+            }
+        }
+        else
+        { 
+                printf("The triangle is not valid.\n");
+        }
     }
     else
     {

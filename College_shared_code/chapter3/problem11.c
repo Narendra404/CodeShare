@@ -20,17 +20,20 @@ int main(void)
 
     l = (int)sqrt(pow((x - a) , 2) + pow((y - b) , 2));
 
-    if (l < r)
-    {
-        printf("The point lies inside the circle.\n");
-    }
-    else if (l > r)
-    {
-        printf("The point lies outside the circle.\n");
-    }
-    else
+    if (l == r)
     {
         printf("The point lies on the circle.\n");
+    }
+    else 
+    {
+        if (l > r)
+        { 
+            printf("The point lies outside the circle.\n");
+        }
+        else
+        {
+            printf("The point lies inside the circle.\n");
+        }
     }
     
     return 0;

@@ -10,21 +10,27 @@ int main(void)
     printf("Enter a point :\n");
     scanf("%d %d", &x, &y);
 
-    if (x == 0 && y!=0)
+    if (x == 0)
     {
-        printf("The point lies on the Y-axis.\n");
-    }
-    else if (y == 0 && x!=0)
-    {
-        printf("The point lies on the X-axis.\n");
-    }
-    else if (x == 0 && y==0)
-    {
-        printf("The point lies on the origin.\n");
+        if (y == 0)
+        {
+            printf("The point lies on the origin.\n");
+        }
+        else
+        {
+            printf("The point lies on the Y-axis.\n");
+        }
     }
     else
     {
-        printf("The point does not lie on X-axis, Y-axis or the origin.\n");
+        if (y == 0)
+        {
+            printf("The point lies on the X-axis.\n");
+        }
+        else
+        {
+            printf("The point does not lie on X-axis, Y-axis or the origin.\n");
+        }
     }
 
     return 0;

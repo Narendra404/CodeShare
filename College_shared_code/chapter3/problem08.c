@@ -10,17 +10,13 @@ int main(void)
     printf("Enter a number (positive, negative or zero) : \n");
     scanf("%d", &n);
 
-    if (n > 0)
+    if (n >= 0)
     {
         printf("The absolute value of %d is %d.\n", n, n);
     }
-    else if (n < 0)
-    {
-        printf("The absolute value of %d is %d.\n", n, - n);
-    }
     else 
     {
-        printf("The absolute value of %d is zero(%d).\n", n, n);
+        printf("The absolute value of %d is %d.\n", n, - n);
     }
 
     return 0;
