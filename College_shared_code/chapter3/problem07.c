@@ -14,27 +14,27 @@ int main(void)
 
     if ((a + b + c) == 180)
     {
-        if (a != 0)
+        if (a == 0)
         {
-            if (b != 0)
-            { 
-                if (c != 0)
-                {
-                    printf("The triangle is valid.\n");
-                }
-                else
-                { 
-                    printf("The triangle is not valid.\n");
-                }
-            }
-            else
-            { 
-                printf("The triangle is not valid.\n");
-            }
+            printf("The triangle is not valid.\n");
         }
         else
         { 
+            if (b == 0)
+            {
                 printf("The triangle is not valid.\n");
+            }
+            else
+            { 
+                if (c == 0)
+                {
+                    printf("The triangle is not valid.\n");
+                }
+                else
+                { 
+                    printf("The triangle is valid.\n");
+                }
+            }
         }
     }
     else
