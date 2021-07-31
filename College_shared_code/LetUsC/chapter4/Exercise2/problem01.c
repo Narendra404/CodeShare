@@ -17,22 +17,14 @@ int main(void)
 
     p = (int)ch;
 
-    if ((p >= 97) && (p <= 122))
-    {
-        printf("The character is a lower case alphabet.\n");
-    }
-    else
-    {
+    ((p >= 97) && (p <= 122)) ? 
+        printf("The character is a lower case alphabet.\n")
+    :
         printf("The character is not a lower case alphabet.\n");
-    }
-    if (((p >= 0) && (p <= 47)) || ((p >= 58) && (p <= 64)) || ((p >= 91) && (p <= 96)) || ((p >= 123) && (p <= 127)))
-    {
-        printf("The character is a special symbol.\n");
-    }
-    else
-    {
+    (((p >= 0) && (p <= 47)) || ((p >= 58) && (p <= 64)) || ((p >= 91) && (p <= 96)) || ((p >= 123) && (p <= 127))) ?
+        printf("The character is a special symbol.\n")
+    :
         printf("The character is not a special symbol.\n");
-    }
     
     return 0;
 }

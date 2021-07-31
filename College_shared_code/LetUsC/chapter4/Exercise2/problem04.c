@@ -17,14 +17,10 @@ int main(void)
     cosine = cos(deg);
     sine = pow(sine , 2.0);
     cosine = pow(cosine , 2.0);
-    if ((sine + cosine) == 1)
-    {
-        printf("The sum of the squares of the sine and cosine of the entered angle is equal to 1.\n");
-    }
-    else
-    {
+    ((sine + cosine) == 1) ?
+        printf("The sum of the squares of the sine and cosine of the entered angle is equal to 1.\n")
+    :
         printf("The sum of the squares of the sine and cosine of the entered angle is not equal to 1.\n");
-    }
     
     return 0;
 }

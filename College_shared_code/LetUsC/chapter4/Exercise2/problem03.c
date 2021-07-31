@@ -10,22 +10,16 @@ int main(void)
     printf("Enter three numbers :\n");
     scanf("%d %d %d", &a, &b, &c);
 
-    if ((a > b) && (a > c))
-    {
-        printf("The greatest number among the numbers entered is %d.\n", a);
-    }
-    else if ((b > a) && (b > c))
-    {
-        printf("The greatest number among the numbers entered is %d.\n", b);
-    }
-    else if ((c > a) && (c > b))
-    {
-        printf("The greatest number among the numbers entered is %d.\n", c);
-    }
-    else
-    {
-        printf("All the numbers entered are same.\n");
-    }
+    (a > b) ?
+        (a > c) ?
+            printf("%d is the greatest number among the entered numbers.\n", a)
+        :
+            printf("%d is the greatest number among the entered numbers.\n", c)
+    :
+        (b > c) ?
+            printf("%d is the greatest number among the entered numbers.\n", b)
+        :
+            printf("%d is the greatest number among the entered numbers.\n", c);
 
     return 0;    
 }
