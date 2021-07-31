@@ -19,11 +19,11 @@ int main(void)
     cosine = pow(cosine , 2.0);
     if ((sine + cosine) == 1)
     {
-        printf("The sum of the squares of the sine and cosine of the entered angle is equal to 1.\n")
+        printf("The sum of the squares of the sine and cosine of the entered angle is equal to 1.\n");
     }
     else
     {
-        printf("The sum of the squares of the sine and cosine of the entered angle is not equal to 1.\n")
+        printf("The sum of the squares of the sine and cosine of the entered angle is not equal to 1.\n");
     }
     
     return 0;
