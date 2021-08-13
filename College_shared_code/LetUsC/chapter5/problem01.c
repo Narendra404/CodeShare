@@ -8,9 +8,9 @@ fractional part of an hour.
 
 int main(void)
 {
-    int over, time;
+    int over, time, i = 0;
 
-    for (int i = 0; i < 10; i++)
+    while (i < 10)
     {
         printf("Enter the no. of hours worked by employee %d :", i + 1);
         scanf("%d", &time);
@@ -24,6 +24,7 @@ int main(void)
             over = (time - 40) * 12;
             printf("Overtime pay of the employee is Rs. %d.\n", over);
         }
+        i++;
     }
     
     return 0;
