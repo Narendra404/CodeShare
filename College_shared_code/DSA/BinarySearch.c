@@ -2,19 +2,19 @@
 
 int main()
 {
-    int first, last, middle, size, i, sElement, list[100];
+    int first, last, middle, size, i, SearchElem, list[100];
 
-    printf("Enter the size of the list: ");
+    printf("Enter the number of elements : ");
     scanf("%d",&size);
 
-    printf("Enter %d integer values in Assending order\n", size);
+    printf("Enter %d elements in Assending or descending order\n", size);
     for (i = 0; i < size; i++)
     {
         scanf("%d",&list[i]);
     }
 
-    printf("Enter value to be search: ");
-    scanf("%d", &sElement);
+    printf("Enter value to be searched: ");
+    scanf("%d", &SearchElem);
 
     first = 0;
     last = size - 1;
@@ -22,11 +22,11 @@ int main()
 
     while (first <= last) 
     {
-        if (list[middle] < sElement)
+        if (list[middle] < SearchElem)
         {
             first = middle + 1;    
         }
-        else if (list[middle] == sElement) 
+        else if (list[middle] == SearchElem) 
         {
             printf("Element found at index %d.\n",middle);
             break;
