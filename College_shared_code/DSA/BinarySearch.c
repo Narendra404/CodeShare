@@ -1,13 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int first, last, middle, size, i, SearchElem, list[100];
+    int first = 0, last, middle, size, i, SearchElem, list[100];
 
     printf("Enter the number of elements : ");
     scanf("%d",&size);
 
-    printf("Enter %d elements in Assending or descending order\n", size);
+    printf("Enter %d integer elements in Assending order : \n", size);
     for (i = 0; i < size; i++)
     {
         scanf("%d",&list[i]);
@@ -16,7 +16,6 @@ int main()
     printf("Enter value to be searched: ");
     scanf("%d", &SearchElem);
 
-    first = 0;
     last = size - 1;
     middle = (first+last)/2;
 

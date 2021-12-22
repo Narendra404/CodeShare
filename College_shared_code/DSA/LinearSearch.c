@@ -1,29 +1,34 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 
-void main(){
-  int list[20],size,i,sElement;
+int main()
+{
+    int list[100],size,i,SearchElem;
 
-  printf("Enter size of the list: ");
-  scanf("%d",&size);
+    printf("Enter the number of elements: ");
+    scanf("%d",&size);
 
-  printf("Enter any %d integer values: ",size);
-  for(i = 0; i < size; i++)
-    scanf("%d",&list[i]);
+    printf("Enter any %d integer elements: \n",size);
+    for(i = 0; i < size; i++)
+    {
+        scanf("%d",&list[i]);
+    }
 
-  printf("Enter the element to be Search: ");
-  scanf("%d",&sElement);
+    printf("Enter the element to be searched : ");
+    scanf("%d",&SearchElem);
   
-  // Linear Search Logic
-  for(i = 0; i < size; i++)
-  {
-     if(sElement == list[i])
-     {
-        printf("Element is found at %d index", i);
-        break;
-     }
-  }
-  if(i == size)
-     printf("Given element is not found in the list!!!");
-  getch();
+    for(i = 0; i < size; i++)
+    {
+        if(SearchElem == list[i])
+        {
+            printf("Element found at index %d.\n", i);
+            break;
+        }
+    }
+
+    if(i == size)
+    {
+        printf("The element to be searched is not found in the list.\n");
+    }
+
+  return 0;
 }
