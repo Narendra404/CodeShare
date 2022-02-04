@@ -1,36 +1,45 @@
+# A program to implement Binary search
+
+# declare an empty list
 arr = []
-ch = 'y'
-while (ch == 'y'):
 
-    n = int(input("Enter the number of elements to enter into the list : "))
+# variable to store number of elements
+n = int(input("Enter the number of elements to enter : "))
 
-    print("Enter the elements one by one.")
-    for i in range(n):
-        a = int(input(f"Element [{i}] : "))
-        arr.append(a)
+# taking input from the user
+print("Enter the elements one by one.")
+for i in range(n):
+    a = int(input(f"Element [{i}] : "))
+    arr.append(a)
 
-    print("The elements in the list are : ")
-    print(arr)
+# sort the list
+arr.sort()
 
-    search = int(input("Enter the element to search : "))
+# displaying the elements in the list
+print("The elements in the list are : ")
+print(arr)
 
-    first = 0
-    last = n
+# variable to store the element to be searched
+search = int(input("Enter the element to search : "))
 
-    while (first < last):
-        mid = int((first + last) / 2)
+# variables required to perform Binary Search
+first = 0
+last = n
 
-        if (arr[mid] == search):
-            print(f"Element found at index {mid}.")
-            break
+# While loop to initiate the search
+while (first < last):
+    mid = int((first + last) // 2)
+
+    if (arr[mid] == search):
+        print(f"Element found at index {mid}.")
+        break
         
-        elif (search < arr[mid]):
-            last = mid - 1
+    elif (search < arr[mid]):
+        last = mid - 1
 
-        else:
-            first = mid + 1
+    else:
+        first = mid + 1
 
-    if (first >= last):
-        print("Element not found in the list.")
-
-    ch = input("Want to continue ? (y/n) : ")
+# If element not found display appropriate message
+if (first >= last):
+    print("Element not found in the list.")
