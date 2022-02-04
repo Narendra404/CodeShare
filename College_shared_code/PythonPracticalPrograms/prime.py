@@ -8,7 +8,7 @@ def isprime(n):
     return True
 
 # variable to store the number of prime numbers
-num=int(input("Enter range:"))
+num=int(input("Enter range: "))
 
 print("Prime numbers:",end=' ')
 
